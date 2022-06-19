@@ -1,10 +1,11 @@
-<form [formGroup]="profileForm" (ngSubmit)= "onSubmit()">
-
-    <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name">
-
-    <label for="email">Email</label>
-    <input type="text" id="email" formControlName="email">
-</form>
-
-<button type="button" (click)="startQuiz()">Start Quiz</button>
+<div class="container">
+    <h1>Path Assessment</h1>
+    <h3>Please Enter your Name and Email to Begin the Assessment</h3>
+    <form id="studentInfo">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+    </form>
+    <button routerLink="/quiz">Begin Assessment</button>
+</div>
