@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -10,13 +10,20 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  
+  studentForm= new FormGroup({
+    name: new FormControl(),
+    email: new FormControl()
+  })
 
-  constructor() {
+  constructor(private router: Router) {
   
    }
 
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    console.log(this.studentForm.value)
+    this.router.navigateByUrl('/quiz')
+  }
 }

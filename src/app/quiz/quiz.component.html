@@ -1,112 +1,63 @@
-<div class='quiz-container p-5 m-3' id='quiz'>
+<form [formGroup]="quizForm" (ngSubmit)="onSubmit()"  class='quiz-container p-5 m-3' id='quiz'>
   <h2> This assessment will help you find which path is best for you! Please answer each question honestly so
     we can provide you with the best possible help for you to succeed!</h2>
- 
-      <h3>Which is more important to me?</h3>
 
-      <input class="form-check-input" type="radio" name="question1" id="security">
-      <label class="form-check-label" for="security">
-        Security
-      </label>
+  <div class="question1">
+    <h3>Which is more important to me?</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="Security" >Security</mat-radio-button>
+      <mat-radio-button value="Opportunity">Opportunity</mat-radio-button>
+    </mat-radio-group>
+  </div>
 
+  <div class="question2">
+    <h3>I am comfortable(or willing to get comfortable) putting myself out there on social media</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="true1">True</mat-radio-button>
+      <mat-radio-button value="false1">False</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="question3">
+    <h3>I am most comfortable working with:</h3>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="Consumers">Consumers</mat-radio-button>
+        <mat-radio-button value="Owners" >Owners</mat-radio-button>
+      </mat-radio-group>
+  </div>
 
-      <input class="form-check-input" type="radio" name="question1" id="opportunity">
-      <label class="form-check-label" for="opportunity">
-        Opportunity
-      </label>
+  <div class="question4">
+    <h3>I am comfortable with person-to-person sales.</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="True2" >True</mat-radio-button>
+      <mat-radio-button value="False2" >False</mat-radio-button>
+    </mat-radio-group>
+  </div>
 
-        <h3>I am comfortable(or willing to get comfortable) putting myself out there on social media</h3>
+  <div class="question5">
+    <h3>I have a marketable expertise I can sell.</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="True3" >True</mat-radio-button>
+      <mat-radio-button value="False3" >False</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="question6">
 
-        <input class="form-check-input" type="radio" name="question2" id="true1">
-        <label class="form-check-label" for="true1">
-          True
-        </label>
+    <h3>Which is more important to me?</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="Speed" >Speed to Results</mat-radio-button>
+      <mat-radio-button value="long-term" >Long-term Results</mat-radio-button>
+    </mat-radio-group>
 
+  </div>
+  <div class="question7">
+    <h3>Which is more important to me?</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="potential">Building a profitable system with unlimited potential</mat-radio-button>
+      <mat-radio-button value="Sellable" >Building a long-term sellable asset</mat-radio-button>
+    </mat-radio-group>
+  </div> 
+</form>
 
-        <input class="form-check-input" type="radio" name="question2" id="false1">
-        <label class="form-check-label" for="false1">
-          False
-        </label>
-
-
-          <h3>I am most comfortable working with:</h3>
-
-          <input class="form-check-input" type="radio" name="question3" id="consumers">
-          <label class="form-check-label" for="consumers">
-            Consumers
-          </label>
-
-
-          <input class="form-check-input" type="radio" name="question3" id="owners">
-          <label class="form-check-label" for="owners">
-            Business Owners
-          </label>
-
-
-
-            <h3>I am comfortable with person-to-person sales.</h3>
-
-            <input class="form-check-input" type="radio" name="question4" id="true2">
-            <label class="form-check-label" for="true2">
-              True
-            </label>
-
-
-            <input class="form-check-input" type="radio" name="question4" id="false2">
-            <label class="form-check-label" for="false2">
-              False
-            </label>
-
-
-
-  
-              <h3>I have a marketable expertise I can sell.</h3>
-
-              <input class="form-check-input" type="radio" name="question5" id="true3">
-              <label class="form-check-label" for="true3">
-                True
-              </label>
-
-
-              <input class="form-check-input" type="radio" name="question5" id="false3">
-              <label class="form-check-label" for="false3">
-                False
-              </label>
-
-
-
-    
-                <h3>Which is more important to me?</h3>
-
-                <input class="form-check-input" type="radio" name="question6" id="speed">
-                <label class="form-check-label" for="speed">
-                  Speed to results
-                </label>
-
-
-                <input class="form-check-input" type="radio" name="question6" id="long">
-                <label class="form-check-label" for="long">
-                  Long term results
-                </label>
-
-
-      
-                  <h3>Which is more important to me?</h3>
-
-                  <input class="form-check-input" type="radio" name="question7" id="potential">
-                  <label class="form-check-label" for="potential">
-                    Building a profitable system with unlimited potential
-                  </label>
-
-
-                  <input class="form-check-input" type="radio" name="question7" id="sellable">
-                  <label class="form-check-label" for="sellable">
-                    Building a long-term sellable asset
-                  </label>
-
-
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button">See Results</button>
-
-
-                  </div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button type="button" (click)="onSubmit()" >See Results</button>
+</div>
